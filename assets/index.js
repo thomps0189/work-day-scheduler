@@ -5,6 +5,19 @@ var taskContent = document.getElementById("task-content");
 var listUlEl = document.getElementById("list-todo");
 var mySchedule = []
 
+$("#task-content").on("click", "input", function() {
+    var text = $(this).text();
+    console.log(text)
+});
+
+$("#submit-btn").click(function() {
+    console.log("submit button clicked");
+});
+
+$("#clear-btn").click(function() {
+    console.log("this is the clear button")
+})
+
 
 function addLi() {
     var textVal = document.getElementById("textVal").value,
@@ -16,15 +29,7 @@ function addLi() {
     listNode.appendChild(liNode);
 }
 
-function addLi10() {
-    var textVal = document.getElementById("textVal").value,
-    listNode = document.getElementById("list-todo"),
-    liNode = document.createElement("LI"),
-    textNode = document.createTextNode(textVal);
 
-    liNode.appendChild(textNode);
-    listNode.appendChild(liNode);
-}
 
 // var tasks = localStorage.getItem("mySchedule")
 // ? JSON.parse(localStorage.getItem("mySchedule"))
