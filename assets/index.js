@@ -1,7 +1,12 @@
-var currentDay = document.getElementById("currentDay");
+var date = moment().format("LLLL");
+document.getElementById("currentDay").innerHTML = date;
+
 var taskContent = document.getElementById("task-content");
 var listUlEl = document.getElementById("list-todo");
 var mySchedule = []
+
+
+
 
 // var tasks = localStorage.getItem("mySchedule")
 // ? JSON.parse(localStorage.getItem("mySchedule"))
