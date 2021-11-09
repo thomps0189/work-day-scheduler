@@ -1,33 +1,30 @@
 var date = moment().format("LLLL");
 document.getElementById("currentDay").innerHTML = date;
 
-var taskContent = document.getElementById("task-content");
-var listUlEl = document.getElementById("list-todo");
-var mySchedule = []
+var nine = document.getElementById("9oclock")
+var taskText = document.getElementById("tasktext");
+var myTasks = [];
+var tasks = localStorage.getItem("myTasks") ? JSON.parse(localStorage.getItem("myTasks")) : localStorage.setItem("myTasks", JSON.stringify(myTasks))
 
-$("#task-content").on("click", "input", function() {
-    var text = $(this).text();
-    console.log(text)
-});
+// var taskContent = document.getElementById("task-content");
+// var listUlEl = document.getElementById("list-todo");
+// var mySchedule = []
 
-$("#submit-btn").click(function() {
-    console.log("submit button clicked");
-});
+// $("#task-content").on("click", "input", function() {
+//     var text = $(this).text();
+//     console.log(text)
+// });
 
-$("#clear-btn").click(function() {
-    console.log("this is the clear button")
-})
+// $("#submit-btn").click(function() {
+//     console.log("submit button clicked");
+// });
+
+// $("#clear-btn").click(function() {
+//     console.log("this is the clear button")
+// })
 
 
-function addLi() {
-    var textVal = document.getElementById("textVal").value,
-    listNode = document.getElementById("list-todo"),
-    liNode = document.createElement("LI"),
-    textNode = document.createTextNode(textVal);
 
-    liNode.appendChild(textNode);
-    listNode.appendChild(liNode);
-}
 
 
 
