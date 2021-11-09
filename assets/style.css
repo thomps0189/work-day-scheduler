@@ -73,3 +73,24 @@ textarea{
 li {
   list-style-type: none;
 }
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+  border: none;
+  margin: -30px;
+  display: inline-block;
+}
+
+#task-content {
+  padding: 10px;
+  border: 1px solid silver;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+}
