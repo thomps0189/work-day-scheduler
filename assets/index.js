@@ -1,9 +1,10 @@
 // display current day and time
 var date = moment().format("LLLL");
 document.getElementById("currentDay").innerHTML = date;
-var myTasks = [];
 
 // fill in and save timeslot items
+var myTasks = [];
+
 var addTask = (event) =>{
     event.preventDefault();
 
@@ -20,7 +21,15 @@ var addTask = (event) =>{
 
     // save to local storage
     localStorage.setItem("MyTaskList", JSON.stringify(myTasks));
-    localStorage.getItem("myTaskList")
+    var x = localStorage.getItem("MyTasksList");
+    document.getElementById("tasktext").innerHTML = x
+    
+    // for (let i = 0; i < localStorage.length; i++) {
+    //     var key = localStorage.key(i);
+    //     var value = localStorage.getItem(key);
+
+    //     myTasks.innerHTML += `${key}: ${value}`
+    // }
          
 }
 
