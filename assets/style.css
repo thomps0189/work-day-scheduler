@@ -104,3 +104,15 @@ textarea {
 .btn {
   background-color: #26413c;
 }
+
+.past {
+  background-color: red;
+}
+
+.present {
+  background-color: green;
+}
+
+.future {
+  background-color: gray;
+}
