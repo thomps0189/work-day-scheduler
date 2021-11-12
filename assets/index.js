@@ -5,7 +5,9 @@ document.getElementById("currentDay").innerHTML = date;
 moment.suppressDeprecationWarnings = true;
 // fill in and save timeslot items
 var myTasks = [];
-var nineOclock = document.getElementById("nineoclock");
+var nineOclock = document.getElementById("task-text-nine");
+var tenOclock = document.getElementById("task-text-ten");
+
 // call function to get data
 
 var savedTasks = function() {
@@ -17,17 +19,27 @@ var savedTasks = function() {
     };
 };
 
-function retrieveTasks() {
+
+
+function retrieveTasksNine() {
     if (savedTasks.length > 0) {
         savedTasks.forEach(task => {
             console.log("this task is: ", task);
-            nineOclock.children[0].children[1].value = task.tasktxtarea
+            nineOclock.value = task.tasktxtarea
+        })
+    }
+}
+
+function retrieveTasksTen() {
+    if (savedTasks.length > 0) {
+        savedTasks.forEach(task => {
+            console.log("this task is: ", task);
+            tenOclock.value = task.tasktxtarea
         })
     }
 }
     
 
-retrieveTasks();
 
 
 
@@ -36,7 +48,7 @@ var addTask = (event) =>{
 
     let task = {
         id: Date.now(),
-        tasktxtarea: document.getElementById("tasktext").value, 
+        tasktxtarea: document.query("tasktext").value, 
     }
     
     myTasks.push(task);
@@ -248,7 +260,10 @@ if (hourBlockNumberFive > presentTime) {
 }
 };
 
-timeBlockHour()
+savedTasks();
+retrieveTasksNine();
+retrieveTasksTen();
+timeBlockHour();
 
 document.getElementById("btn9").addEventListener("click", addTask)
 
