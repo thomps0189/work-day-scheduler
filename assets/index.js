@@ -24,7 +24,7 @@ var savedTasks = function() {
 function retrieveTasksNine() {
     if (savedTasks.length > 0) {
         savedTasks.forEach(task => {
-            console.log("this task is: ", task);
+            console.log("this task is at 9 am: ", task);
             nineOclock.value = task.tasktxtarea
         })
     }
@@ -33,7 +33,7 @@ function retrieveTasksNine() {
 function retrieveTasksTen() {
     if (savedTasks.length > 0) {
         savedTasks.forEach(task => {
-            console.log("this task is: ", task);
+            console.log("this task is at 10: ", task);
             tenOclock.value = task.tasktxtarea
         })
     }
@@ -48,7 +48,8 @@ var addTask = (event) =>{
 
     let task = {
         id: Date.now(),
-        tasktxtarea: document.query("tasktext").value, 
+        tasktxtarea: document.getElementById
+        ("task-text-nine").value, 
     }
     
     myTasks.push(task);
@@ -67,6 +68,7 @@ var addTask = (event) =>{
     }
          
 }
+
 
 var timeBlockHour = function() {
     // what is the present time in hours
@@ -260,12 +262,21 @@ if (hourBlockNumberFive > presentTime) {
 }
 };
 
-savedTasks();
+
 retrieveTasksNine();
 retrieveTasksTen();
+savedTasks();
 timeBlockHour();
 
 document.getElementById("btn9").addEventListener("click", addTask)
+document.getElementById("btn10").addEventListener("click", addTask)
+document.getElementById("btn11").addEventListener("click", addTask)
+document.getElementById("btn12").addEventListener("click", addTask)
+document.getElementById("btn1").addEventListener("click", addTask)
+document.getElementById("btn2").addEventListener("click", addTask)
+document.getElementById("btn3").addEventListener("click", addTask)
+document.getElementById("btn4").addEventListener("click", addTask)
+document.getElementById("btn5").addEventListener("click", addTask)
 
 
 
