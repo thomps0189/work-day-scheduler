@@ -106,13 +106,13 @@ textarea {
 }
 
 .past {
-  background-color: red;
+  background-color: #bebbbb;
 }
 
 .present {
-  background-color: green;
+  background-color: #0072bb;
 }
 
 .future {
-  background-color: gray;
+  background-color: #b7e4c7;
 }
